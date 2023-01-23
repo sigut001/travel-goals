@@ -1,0 +1,9 @@
+body{
+    font-family: 'Lobster', cursive;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
