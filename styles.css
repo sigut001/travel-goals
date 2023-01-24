@@ -1,158 +1,159 @@
-body {
-  height: auto;
+/* ID-Elemente---------------------------------------------------------------- */
+
+#section_hintergrund {
   background-image: url(/img/ocean.jpg);
   background-position: center;
   background-size: cover;
-  color: bisque;
-  text-decoration: none;
-  text-shadow: 3px 3px 3px black;
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 1250px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
+/* -------------------------------------------------------- */
 
-header {
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  min-width: 700px;
-}
-
-main {
-  height: fit-content;
-}
-
-#Logo:hover {
-  color: blueviolet;
-}
-
-a:hover {
-  color: blueviolet;
-  background-color: rgb(64, 160, 244) ;
-}
-
-header div,
-header nav {
-  margin-top: -10px;
-  padding: 0 35px;
-}
-
-#Logo {
-  font-size: 60px;
-  color: rgb(64, 160, 244);
-  text-decoration: none;
-}
-
-nav {
-  width: 200px;
-}
-
-header nav ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  font-size: 40px;
-}
-
-header nav ul a {
-  text-decoration: none;
-}
-
-/* MAIN___________________________________________________________
- */
-#section_fenster {
+#section_window {
   /*Hier wird die erste Sektion gestylt*/
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 650px;
   width: 100%;
-}
-
-section h1 {
-  /*Hier werden die Überschriften in den Sektionen gestylt*/
-  margin-top: 20px;
-  font-size: 40px;
-}
-
-section a {
-  /*Hier werden alle Links der Sektionen gestylt*/
-  color: rgb(216, 231, 226);
-  text-decoration: none;
-  font-family: "Lobster", cursive;
-  background-color: rgb(234, 195, 104);
-  border-radius: 6px;
-  padding: 5px;
-}
-
-h1, a, p {
-  margin: 10px;
-  
 }
 
 #window {
   /*Hier wird das Fenster der ersten Sektion gestylt*/
+  position: absolute;
+  z-index: 2;
+  top: 250px;
   text-align: center;
   padding: 20px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   font-size: 25px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  height: fit-content;
-  width: fit-content;
+  height: 200px;
+  width: 600px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-#section_highlights {
-  background-color: antiquewhite;
-  height: 400px;
-  width: 100%;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
+#window a {
+  padding: 10px;
 }
 
-#highlights{
+#window a:hover {
+  font-size: larger;
+  border-radius: 10px;
+}
+
+/* -------------------------------------------------------- */
+
+#section_highlights {
+  position: relative;
+  top: 720px;
+  z-index: 2;
+  background-color: rgba(133,184,203,0.7);
+  height: fit-content;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+#section_highlights a {
+  margin-top: 35px;
+}
+
+#wort_highlights {
+  padding: 30px;
+  font-size: 60px;
+}
+
+#wort_highlights span:hover {
+  color: var(--footer_color);
+}
+
+#highlights {
+  
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
 
-.city_cards{
-  height: 150px;
-  width: 300px;
-  background-position: center;
-  background-size: cover;
-}
-
 #stadt1 {
-  background-image: url(/img/ocean.jpg);
-  
+  background-image: url(/img/munich.jpg);
 }
 
 #stadt2 {
-  background-image: url(/img/ocean.jpg);
+  background-image: url(/img/barcelona.jpg);
 }
 
 #stadt3 {
-  background-image: url(/img/ocean.jpg);
-  }
-/* FOOTER_________________________________________________________________________________
- */
-footer {
-  height: 220px;
-  background-color: rgb(49, 48, 48);
-  width: 100%;
+  background-image: url(/img/miami.jpg);
 }
 
-/* ALLGEMEIN_______________________________________________________________________________
- */
+/* Klassen-------------------------------------------------------------------- */
+
+.wort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wort span:hover {
+  color: var(--footer_color);
+}
+
+.city_cards {
+  height: 150px;
+  width: 350px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+.city_div {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.city_cards:hover {
+  scale: 130%;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7);
+}
+
+.städte_button{
+  font-size: 30px;
+}
+
 .box {
   /*Hierdurch werden alle Elemente welche wie ein Box behandelt werden gestylt */
   border: 7px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+}
+
+/* spez. Selektoren------------------------------------------------------------------------ */
+
+section h1 {
+  /*Hier werden die Überschriften in den Sektionen gestylt*/
+  margin-top: 20px;
+  font-size: 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+section a {
+  /*Hier werden alle Links der Sektionen gestylt*/
+  color: var(--font_color);
+  text-decoration: none;
+  font-family: "Lobster", cursive;
+  background-color: var(--button_color);
+  border-radius: 6px;
+  padding: 5px;
 }
