@@ -1,14 +1,4 @@
 /* Allgemeines ----------------------------------------------- */
-body {
-  font-family: "Lobster", cursive !important;
-  text-shadow: 3px 3px 3px black;
-  color: #d1dddb !important;
-  min-width: 1300px;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --main_color: #85b8cb;
   --font_color: #d1dddb;
@@ -18,85 +8,13 @@ body {
   
 }
 
-span:hover{
-    cursor:default;
-}
 
-/* header mit Logo und Navbar --------------------------------------------*/
-header {
-  position: relative;
-  top: 0;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 85px;
-  background-color: rgba(133,184,203,0.7) ;
-}
+/* header  --------------------------------------------*/
+
 /* Logo -----------------------------*/
-#Logo {
-  font-size: 60px;
-  text-decoration: none;
-  padding-left: 30px;
-}
-#Logo:hover {
-  color: --main_ !important;
-  font-size: 65px;
-}
 
 /* Navbar --------------------------*/
-nav {
-  width: 450px;
-}
-#ul_nav {
-  padding-right: 30px;
-  display: flex;
-  justify-content: space-between;
-}
 
-header li {
-  list-style-type: none !important;
-  list-style: none !important;
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-}
-header a {
-  text-decoration: none !important;
-  color: var(--font_color);
-}
-
-header a:hover {
-  background-color: transparent !important;
-  color: var(--main_color) !important;
-}
 /* FOOTER_________________________________________________________________________________
  */
-footer {
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  position: relative;
-  top: 720px;
-  height: 130px;
-  background-color: var(--footer_color);
-  width: 100%;
-  z-index: 2;
-}
 
-footer img {
-  size: inherit;
-  margin: 35px;
-}
-
-#insta_icon {
-  position: relative;
-  left: -250px;
-}
-#fb_icon {
-  position: relative;
-  left: 250px;
-}
