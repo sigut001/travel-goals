@@ -1,0 +1,128 @@
+body {
+  background-color: rgb(114, 112, 112);
+  background-image: none;
+}
+
+main ul {
+  display: grid;
+  gap: 1.5em 1.5em;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  padding: 0.5em;
+  margin: 1.875em auto;
+  list-style: none;
+}
+
+li:nth-of-type(3),
+li:nth-of-type(6) {
+  grid-column: 1 / 3;
+}
+li:nth-of-type(3) img,
+li:nth-of-type(6) img {
+  width: 33%;
+}
+
+.placecard {
+  display: flex;
+  background-color: white;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.placecard img {
+  height: 25.625em;
+  width: 43%;
+  object-fit: cover;
+}
+
+.placecard_text {
+  margin: 0.35em 1.25em;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.placecard p {
+  font-size: 0.95em;
+  text-align: left;
+  margin: 0.95em 0.95em;
+  color: rgb(109, 99, 99);
+}
+
+.placecard h2 {
+  font-size: 1.9em;
+  text-align: left;
+  margin: 0.95em 0.95em;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.placecard a {
+  font-weight: 800;
+  font-size: 1.7em;
+  color: rgb(82, 248, 250);
+  text-align: right;
+  position: absolute;
+  bottom: -9px;
+  right: 4px;
+  margin: 0;
+  padding: 1.08em;
+}
+
+/*Handy-Ansicht*/
+@media screen and (max-width: 2176px) {
+  .placecard img {
+    transition: 3s;
+    height: 25.625em;
+    width: 53%;
+    object-fit: cover;
+  }
+
+  li:nth-of-type(3) img,
+  li:nth-of-type(6) img {
+    width: 53%;
+    transition: 3s;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  main ul {
+    transition: 3s;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em 1.5em;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 1.875em auto;
+    list-style: none;
+  }
+
+  li:nth-of-type(3) img,
+  li:nth-of-type(6) img {
+    width: 43%;
+    transition: 3s;
+  }
+
+  .placecard img {
+    transition: 3s;
+    height: 25.625em;
+    width: 43%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 2176px) {
+  li:nth-of-type(3) img,
+  li:nth-of-type(6) img {
+    width: 43%;
+    transition: 3s;
+  }
+
+  .placecard img {
+    transition: 3s;
+    height: 25.625em;
+    width: 43%;
+    object-fit: cover;
+  }
+}
