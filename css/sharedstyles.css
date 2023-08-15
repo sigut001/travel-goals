@@ -58,9 +58,6 @@ header {
   gap: 0.3em;
 }
 
-.nav-bar__tabs {
-}
-
 .nav-bar__links {
   display: inherit;
   text-align: center;
@@ -86,9 +83,6 @@ main {
 section {
   padding: 4em;
   text-align: center;
-}
-
-.section--willkommen {
 }
 
 .message-window {
