@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,49 +22,86 @@
 
   <body>
     <header>
-      <a id="logo" href="index.html">Travel Goals</a>
-      <nav >
-        <ulv id="navigationsbar">
-          <li><a href="destinations.html"><strong>Places</strong></a></li>
-        </ul>
-      </nav>
+      <div class="header-wrapper">
+        <a id="logo" href="index.html">Travel Goals</a>
+        <nav>
+          <ul class="nav-bar">
+            <li class="nav-bar__tabs">
+              <a class="nav-bar__links buttons" href="destinations.html"
+                ><strong>Places</strong></a
+              >
+            </li>
+            <li class="nav-bar__tabs">
+              <a class="nav-bar__links buttons" href="destinations.html"
+                ><strong>About</strong></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section id="section_willkommensfenster">
-        <div class="boxModell" id="willkommensfenster">
+      <section class="section--willkommen">
+        <div class="message-window">
           <h1>Willkommen</h1>
           <p>Entdecken wir gemeinsam die Welt</p>
-          <a class="buttonModell" href="https://de.wikipedia.org/wiki/Balve">Heutriges Reiseziel</a>
+          <a class="buttons" href="https://de.wikipedia.org/wiki/Balve"
+            >Heutriges Reiseziel</a
+          >
         </div>
       </section>
 
-      <section id="section_Highlights">
+      <section class="section--highlights">
         <h2><strong>HIGHLIGHTS</strong></h2>
-        <ul id="ul_places">
-          <li class="placeCards">
-            <img class="cityPictures boxModell" src="/img/munich.jpg" alt="" />
-            <h3>München <strong>Germany</strong></h3>
+        <ul class="ul-places-directory">
+          <li>
+            <a class="place-cards" href="">
+              <img class="place-images" src="/img/munich.jpg" alt="" />
+              <h3>München <strong>GERMANY</strong></h3>
+            </a>
           </li>
-
-          <li class="placeCards">
-            <img class="cityPictures boxModell" src="/img/miami.jpg" alt="" />
-            <h3>Miami <strong>USA</strong></h3>
+          <li>
+            <a class="place-cards" href="">
+              <img class="place-images" src="/img/miami.jpg" alt="" />
+              <h3>Miami <strong>USA</strong></h3>
+            </a>
           </li>
-
-          <li class="placeCards">
-            <img class="cityPictures boxModell"  src="/img/barcelona.jpg" alt="" />
-            <h3>Barcelona <strong>SPAIN</strong></h3>
+          <li>
+            <a class="place-cards" href="">
+              <img class="place-images" src="/img/barcelona.jpg" alt="" />
+              <h3>Barcelona <strong>SPAIN</strong></h3>
+            </a>
           </li>
         </ul>
       </section>
     </main>
 
     <footer>
-        <div id="iconHolder">
-            <a href="https://instagram.com"><img class="icons" src="/icons/insta.png" alt="Facebook-Item" /></a>
-            <a href="https://facebook.com"> <img class="icons" src="/icons/facebook.png" alt="Facebook-Item" /></a>
+      <div class="footer-wrapper">
+        <div class="footer-wrapper-container left">
+          <div class="contact-data">
+            <p>Simon Guth</p>
+            <p>Münsterstraße 79</p>
+            <p>44145 Dortmund</p>
+          </div>
         </div>
+        <div class="footer-wrapper-container middle">
+          <ul class="ul-icon-wrapper">
+            <li>
+              <a href="https://www.instagram.com">
+                <img src="/icons/insta.png" alt="Instgramm icon" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com">
+                <img src="/icons/facebook.png" alt="Facebook icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-wrapper-container"></div>
+      </div>
     </footer>
   </body>
 </html>
