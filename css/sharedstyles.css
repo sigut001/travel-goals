@@ -71,6 +71,12 @@ header {
   min-width: 6rem;
   border-radius: 0.1em;
   color: azure;
+  transition: 0.2s;
+}
+
+.nav-bar__links:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 0.5em;
 }
 
 main {

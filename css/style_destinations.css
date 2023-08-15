@@ -9,6 +9,7 @@
   padding-inline-start: 0px;
 }
 
+/*UL mit Gridlayout */
 .places-grid-directory-destinations {
   display: grid;
   list-style: none;
@@ -25,6 +26,7 @@
   grid-auto-columns: 1fr;
 }
 
+/* Vergabe der Areas an die einzelenen Karten */
 .place-cards-destinations:nth-of-type(1) {
   grid-area: one;
 }
@@ -44,6 +46,7 @@
   grid-area: six;
 }
 
+/* Allgemeine Place-Cards-Layout */
 .place-cards-destinations {
   background-color: antiquewhite;
   display: flex;
@@ -53,6 +56,7 @@
   box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.928);
 }
 
+/* Spezifische Layouteinstellungen */
 .place-cards-destinations.reverse {
   flex-direction: row-reverse;
 }
@@ -61,6 +65,7 @@
   flex-direction: column;
 }
 
+/* Allgemeines Bild-layout */
 img {
   object-fit: cover;
   position: relative;
@@ -73,6 +78,7 @@ img:hover {
   transition: 2s;
 }
 
+/* Spezifisches Bildlayout */
 img.horizontal {
   width: 55%;
 }
@@ -82,16 +88,11 @@ img.vertikal {
   height: 45%;
 }
 
+/* Allgemeines Layout für Textbereich auf den Karten */
 .text-bereich-destinations {
   padding: 0.6em;
   position: relative;
   background-color: antiquewhite;
-}
-.place-cards-destinations.vertikal .text-bereich-destinations {
-  width: 45%;
-}
-.place-cards-destinations.vertikal .text-bereich-destinations {
-  width: 100%;
 }
 
 .text-bereich-destinations h2 {
@@ -118,11 +119,6 @@ img.vertikal {
   text-shadow: 0.05em 0.05em rgba(19, 18, 18, 0.78);
 }
 
-.place-cards-destinations.vertikal a {
-  top: 88.5%;
-  left: 77%;
-}
-
 .text-bereich-destinations a::before {
   content: url(/icons/icons8-pfeil-48.png);
   fill: rgb(106, 111, 111);
@@ -130,14 +126,6 @@ img.vertikal {
   top: -42%;
   left: -70%;
   animation: pfeilbewegung 1s ease-in-out 0.5s infinite;
-}
-
-.place-cards-destinations.vertikal .text-bereich-destinations a::before {
-  top: -48%;
-  left: -68%;
-}
-.text-bereich-destinations a:hover {
-  transform: scale(1.05);
 }
 
 @keyframes pfeilbewegung {
@@ -148,4 +136,23 @@ img.vertikal {
   100% {
     transform: scale(0.4) translate(0%, 0);
   }
+}
+
+.text-bereich-destinations a:hover {
+  transform: scale(1.05);
+}
+/* Spezifisches Layout für den Textbereich der vertikalen Karten */
+.place-cards-destinations.vertikal .text-bereich-destinations {
+  width: 45%;
+}
+.place-cards-destinations.vertikal .text-bereich-destinations {
+  width: 100%;
+}
+.place-cards-destinations.vertikal a {
+  top: 88.5%;
+  left: 77%;
+}
+.place-cards-destinations.vertikal .text-bereich-destinations a::before {
+  top: -48%;
+  left: -68%;
 }
